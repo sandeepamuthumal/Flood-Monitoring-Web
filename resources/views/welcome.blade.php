@@ -8,17 +8,18 @@
     <title>Flood Monitoring System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background-color: #f4f4f9;
             font-family: 'Arial', sans-serif;
         }
 
-        .sensor-data{
+        .sensor-data {
             height: 80vh;
             margin: auto
         }
+
         .card {
             border: none;
             border-radius: 15px;
@@ -52,7 +53,22 @@
             /* Red */
             font-weight: bold;
         }
+
+        .vehicle-icon {
+            font-size: 24px;
+        }
+        .allow-icon {
+            font-size: 20px;
+        }
+        .allow-icon.allowed {
+            color: green;
+        }
+        .allow-icon.not-allowed {
+            color: red;
+        }
     </style>
+
+    @livewireStyles
 </head>
 
 <body>
@@ -60,77 +76,7 @@
     <div class="container">
         <h1 class="text-center p-3 text-primary fw-bold">Flood Monitoring System</h1>
 
-        <div class="sensor-data">
-            <div class="row">
-                <!-- River Water Level -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">River Water Level</h5>
-                            <p class="card-text">Current Level: <span id="river-level" class="fw-bold">0 cm</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Road Water Level -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Road Water Level</h5>
-                            <p class="card-text">Current Level: <span id="road-level" class="fw-bold">0 cm</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Flood Gate Status -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Flood Gate Status</h5>
-                            <p class="card-text">Status: <span id="flood-gate-status"
-                                    class="status-indicator status-closed">Closed</span></p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="row">
-                <!-- Rain Status -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Rain Status</h5>
-                            <p class="card-text">Rain Level: <span id="rain-status" class="fw-bold">No Rain</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Temperature -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Temperature</h5>
-                            <p class="card-text">Current Temperature: <span id="temperature" class="fw-bold">0&deg;C</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vehicles Status -->
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Vehicles Allowed</h5>
-                            <ul id="vehicles-list" class="list-group">
-                                <li class="list-group-item">No vehicles allowed</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @livewire('sensor-data')
 
     </div>
 
@@ -143,6 +89,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
     </script>
+
+    @livewireScripts
 </body>
 
 </html>
