@@ -5,10 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Flood Monitoring & Warning System" />
+    <meta name="keywords"
+        content="flood-monitoring-system, flood warning system, flood monitoring & warning system, flood alert system" />
+    <meta name="author" content="flood-monitoring-system" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Flood Monitoring System</title>
+
+    <!-- Favicon icon-->
+    <link rel="icon" href="{{ asset('images/flood-logo.jpg') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('images/flood-logo.jpg') }}" type="image/x-icon" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background-color: #f4f4f9;
@@ -57,12 +69,15 @@
         .vehicle-icon {
             font-size: 24px;
         }
+
         .allow-icon {
             font-size: 20px;
         }
+
         .allow-icon.allowed {
             color: green;
         }
+
         .allow-icon.not-allowed {
             color: red;
         }

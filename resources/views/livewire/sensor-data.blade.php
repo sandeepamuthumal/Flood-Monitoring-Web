@@ -4,7 +4,9 @@
             <div class="col-lg-4">
                 <select name="city" id="city" class="form-select">
                     <option value="">Choose City</option>
-
+                    @foreach ($cities as $city)
+                        <option value="{{ $city->id }}">{{ $city->city }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
