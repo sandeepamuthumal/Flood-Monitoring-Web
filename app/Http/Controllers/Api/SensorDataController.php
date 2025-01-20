@@ -43,6 +43,12 @@ class SensorDataController extends Controller
                 $data_reading->temperature = $request->temperature;
                 $data_reading->rain_level = $request->rainLevel;
                 $data_reading->recorded_at = Carbon::now();
+                if ($request->gateStatus == true || $request->gateStatus == True){
+                    $data_reading->gate_status = 1;
+                }
+                else{
+                    $data_reading->gate_status = 0;
+                }
                 $data_reading->save();
             } else {
                 $data = SensorData::where('cities_id', $city->id)->first();
@@ -58,6 +64,12 @@ class SensorDataController extends Controller
                 $data_reading->temperature = $request->temperature;
                 $data_reading->rain_level = $request->rainLevel;
                 $data_reading->recorded_at = Carbon::now();
+                if ($request->gateStatus == true || $request->gateStatus == True){
+                    $data_reading->gate_status = 1;
+                }
+                else{
+                    $data_reading->gate_status = 0;
+                }
                 $data_reading->update();
             }
 
