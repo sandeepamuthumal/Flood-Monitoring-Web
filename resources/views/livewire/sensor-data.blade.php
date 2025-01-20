@@ -107,44 +107,28 @@
                                     <td><i class="fas fa-car vehicle-icon"></i></td>
                                     <td>Car</td>
                                     <td>
-                                        @if ($vehicles['Car'] == true)
-                                            <i class="fas fa-check-circle allow-icon allowed"></i>
-                                        @else
-                                            <i class="fas fa-times-circle allow-icon not-allowed">
-                                        @endif
+                                        <i class="fas {{ $vehicles['Car'] == true ? 'fa-check-circle allowed' : 'fa-times-circle not-allowed' }} allow-icon"></i>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-bus vehicle-icon"></i></td>
                                     <td>Bus</td>
                                     <td>
-                                        @if ($vehicles['Bus'] == true)
-                                            <i class="fas fa-check-circle allow-icon allowed"></i>
-                                        @else
-                                            <i class="fas fa-times-circle allow-icon not-allowed">
-                                        @endif
+                                        <i class="fas {{ $vehicles['Bus'] == true ? 'fa-check-circle allowed' : 'fa-times-circle not-allowed' }} allow-icon"></i>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-motorcycle vehicle-icon"></i></td>
                                     <td>Motorcycle</td>
                                     <td>
-                                        @if ($vehicles['Motorcycle'] == true)
-                                            <i class="fas fa-check-circle allow-icon allowed"></i>
-                                        @else
-                                            <i class="fas fa-times-circle allow-icon not-allowed">
-                                        @endif
+                                        <i class="fas {{ $vehicles['Motorcycle'] == true ? 'fa-check-circle allowed' : 'fa-times-circle not-allowed' }} allow-icon"></i>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><i class="fas fa-truck vehicle-icon"></i></td>
                                     <td>Truck</td>
                                     <td>
-                                        @if ($vehicles['Truck'] == true)
-                                            <i class="fas fa-check-circle allow-icon allowed"></i>
-                                        @else
-                                            <i class="fas fa-times-circle allow-icon not-allowed">
-                                        @endif
+                                        <i class="fas  {{ $vehicles['Truck'] == true ? 'fa-check-circle allowed' : 'fa-times-circle not-allowed' }} allow-icon "></i>
                                     </td>
                                 </tr>
                             </tbody>

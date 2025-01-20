@@ -41,19 +41,32 @@ class SensorData extends Component
 
     private function updateVehicleStatus()
     {
-        if($this->road_level >= 0.5){
+        $this->resetVehicleStatus();
+
+        if($this->road_level >= 0.1){
+
             $this->vehicles['Motorcycle'] = false;
         }
 
-        if($this->road_level >= 1){
+        if($this->road_level >= 0.3){
             $this->vehicles['Car'] = false;
         }
 
-        if($this->road_level >= 2){
+        if($this->road_level >= 1){
             $this->vehicles['Bus'] = false;
             $this->vehicles['Truck'] = false;
         }
 
+    }
+
+    private function resetVehicleStatus()
+    {
+        $this->vehicles = [
+            'Car' => true,
+            'Bus' => true,
+            'Motorcycle' => true,
+            'Truck' => true,
+        ];
     }
 
 

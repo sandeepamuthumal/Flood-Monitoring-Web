@@ -40,7 +40,7 @@
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
